@@ -58,7 +58,7 @@ ROOT_URLCONF = 'cygnus.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'city-react-app/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,4 +130,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'city-react-app/build/static')
+]
 
